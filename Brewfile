@@ -1,6 +1,6 @@
 brew "asdf"
 brew "gpg"
-brew "postgresql@12"
+brew "postgresql@17"
 brew "hub"
 cask "docker"
 cask "aptible"
