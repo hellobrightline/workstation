@@ -133,15 +133,15 @@ source $SHELL_CONFIG
 
 
 echo "==> Installing ruby asdf plugin"
-asdf plugin-list | grep ruby || asdf plugin-add ruby
+asdf plugin list | grep ruby || asdf plugin add ruby
 echo
 
 echo "==> Installing node asdf plugin"
-asdf plugin-list | grep nodejs || asdf plugin-add nodejs
+asdf plugin list | grep nodejs || asdf plugin add nodejs
 echo
 
 echo "==> Installing yarn asdf plugin"
-asdf plugin-list | grep yarn || asdf plugin-add yarn
+asdf plugin list | grep yarn || asdf plugin add yarn
 echo
 
 echo "==> Installing jq (JSON processing cli)…"
