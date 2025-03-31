@@ -85,7 +85,7 @@ fi
 
 # Download strap.sh and run it
 echo "==> Downloading strap.sh script from github.com/MikeMcQuaid/strap…"
-curl https://raw.githubusercontent.com/MikeMcQuaid/strap/master/bin/strap.sh -o strap.sh
+curl https://raw.githubusercontent.com/MikeMcQuaid/strap/refs/heads/main/strap.sh -o strap.sh
 echo
 
 echo "==> Strapping your Mac…"
@@ -133,15 +133,15 @@ source $SHELL_CONFIG
 
 
 echo "==> Installing ruby asdf plugin"
-asdf plugin-list | grep ruby || asdf plugin-add ruby
+asdf plugin list | grep ruby || asdf plugin add ruby
 echo
 
 echo "==> Installing node asdf plugin"
-asdf plugin-list | grep nodejs || asdf plugin-add nodejs
+asdf plugin list | grep nodejs || asdf plugin add nodejs
 echo
 
 echo "==> Installing yarn asdf plugin"
-asdf plugin-list | grep yarn || asdf plugin-add yarn
+asdf plugin list | grep yarn || asdf plugin add yarn
 echo
 
 echo "==> Installing jq (JSON processing cli)…"
