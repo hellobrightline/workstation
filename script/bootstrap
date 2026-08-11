@@ -85,7 +85,7 @@ fi
 
 # Download strap.sh and run it
 echo "==> Downloading strap.sh script from github.com/MikeMcQuaid/strap…"
-curl https://raw.githubusercontent.com/MikeMcQuaid/strap/refs/heads/main/strap.sh -o strap.sh
+curl https://raw.githubusercontent.com/MikeMcQuaid/strap/refs/heads/main/bin/strap.sh -o strap.sh
 echo
 
 echo "==> Strapping your Mac…"
