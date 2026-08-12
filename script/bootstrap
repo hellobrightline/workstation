@@ -119,14 +119,14 @@ else
 fi
 
 echo "==> Injecting asdf into PATH"
-ASDF_DATA_DIR=`brew --prefix asdf`
+# shellcheck disable=SC2016
+ASDF_CONFIG_LINE='source $(brew --prefix asdf)/libexec/asdf.sh'
 
-if grep -Fq "$ASDF_DATA_DIR" $SHELL_CONFIG
+if grep -Fq "$ASDF_CONFIG_LINE" "$SHELL_CONFIG"
 then
   echo "    Already found asdf in path. Skipping."
 else
-  echo "export ASDF_DATA_DIR=$ASDF_DATA_DIR" >> $SHELL_CONFIG
-  echo 'source $ASDF_DATA_DIR/libexec/asdf.sh' >> $SHELL_CONFIG
+  echo "$ASDF_CONFIG_LINE" >> "$SHELL_CONFIG"
   echo
 fi
 source $SHELL_CONFIG
